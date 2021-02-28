@@ -1,0 +1,99 @@
+.Container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+}
+
+.main_Container{
+    border: 1px solid lightgray;
+    height: 610px;
+    width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    border-radius: 8px;
+    }
+
+    .main_Container_Text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+        height: 30%;       
+    }
+
+    .main_Container_Title{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main_Container_Title_Text{
+        font-family: 'Snell Roundhand', cursive;
+        font-size: large;
+        display: flex;
+        align-items: center;
+    }
+
+    .main_Container_Operation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+    }
+
+    .main_Container_Operation_form{
+        width: 100%;
+    }
+    
+    .main_Container_Operation_Button{
+        /* margin: 10px; */
+        height: 25%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.btn {
+        border: none;
+        color: white;
+        padding: 14px 28px;
+        font-family: 'Andale Mono', monospace;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 8px;
+        width: 200px;
+        /* height: 45px; */
+    }
+
+.success {background-color: #4CAF50;} /* Green */
+.success:hover {
+            background-color: #46a049;
+            height: 60px;  
+            width: 250px;
+
+        }
+    
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {
+    background: #0b7dda;
+    height: 60px;  
+    width: 250px;
+}
+    
+.warning {background-color: #ff9800;} /* Orange */
+.warning:hover {
+    background: #e68a00;
+    height: 60px;  
+    width: 250px;
+}
+    
+.danger {background-color: #f44336;} /* Red */ 
+.danger:hover {background: #da190b;
+    height: 60px;  
+    width: 250px;    
+}
+
