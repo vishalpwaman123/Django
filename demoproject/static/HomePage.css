@@ -2,7 +2,10 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: lightgray;
+    background-color: rgb(235, 232, 232);
+    box-sizing: border-box;
+    margin: 0%;
+    /* background-color: rgb(241, 235, 235); */
 }
 
 .main_Container{
@@ -10,8 +13,9 @@
     height: 610px;
     width: 400px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: white;
+    background-color:white;
     border-radius: 8px;
+    margin: 6px;
     }
 
     .main_Container_Text{
@@ -46,6 +50,7 @@
 
     .main_Container_Operation_form{
         width: 100%;
+        height: 100%;
     }
     
     .main_Container_Operation_Button{
@@ -68,6 +73,11 @@
         width: 200px;
         /* height: 45px; */
     }
+
+.btn a{
+    color: white;
+    text-decoration: none;
+}
 
 .success {background-color: #4CAF50;} /* Green */
 .success:hover {

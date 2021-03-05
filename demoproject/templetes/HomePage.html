@@ -1,8 +1,10 @@
+{% block content %}
+<!doctype html>
 <html>
-
 <head>
     <title>Home Page</title>
-    <link rel="stylesheet" href="HomePage.css">
+    {% load static %}
+    <link rel="stylesheet" href={% static 'HomePage.css' %}>
 </head>
 
 <body class="Container">
@@ -19,16 +21,16 @@
         <div class="main_Container_Operation">
             <form class="main_Container_Operation_form">
                 <div class="main_Container_Operation_Button">
-                    <button class="btn success">Insert</button>
+                    <button class="btn success"><a href={% url 'insert' %}>Insert</a></button>
                 </div>
                 <div class="main_Container_Operation_Button">
-                    <button class="btn info">Display</button>
+                    <button class="btn info"><a href={% url 'display' %}>Display</a></button>
                 </div>
                 <div class="main_Container_Operation_Button">
-                    <button class="btn danger">Delete</button>
+                    <button class="btn danger"><a href={% url 'delete' %}>Delete</a></button>
                 </div>
                 <div class="main_Container_Operation_Button">
-                    <button class="btn warning">Update</button>
+                    <button class="btn warning" ><a href={% url 'update' %}>Update</a></button>
                 </div>
             </form>
         </div>
@@ -37,3 +39,5 @@
 </body>
 
 </html>
+
+{% endblock %}

@@ -1,0 +1,163 @@
+.Cointainer{
+    display:629px;
+    margin: 0px;
+    width: 100%;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    background-color: rgb(245, 245, 245);
+}
+
+.text_effect{
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+.main_Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.sub_Container{
+    height: 60%;
+    width: 50%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+.sub_Container_upper{
+    height: 30%;
+    width: 100%;
+    /* border: 1px solid white;
+    box-sizing: border-box; */
+    display: flex;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sub_Container_bottom{
+    height: 70%;
+    width: 100%;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+.sub_Container_Upper_Button{
+    height: 100%;
+    width: 30%;
+    border: 1px solid white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Upper_SearchButton{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid white;
+    box-sizing: border-box; */
+}
+
+
+.table_Formate{
+    width: 100%;
+    /* border: 2px solid black; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-sizing: border-box;     */
+    margin: 5px 0 0 0;
+}
+
+.table_Formate_Header_Row{
+}
+
+.table_Formate_Attribute_Id{
+    width: 15%;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.table_Formate_Attribute_Name{
+    width: 30%;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.table_Formate_Attribute_Email{
+    width: 40%;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.table_Formate_Attribute_Salary{
+    width: 15%;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.btn{
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn:hover{
+    background-color: rgb(87, 110, 131);
+}
+
+.btn1{
+    width: 50%;
+    height: 70%;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn1:hover{
+    background-color: rgb(250, 79, 79);
+}
+
+.search_btn{
+    background-color: slategray;
+    color: white;
+    font-weight: 600;
+}
+
+.search_btn1{
+    background-color: rgb(255, 107, 107);
+    color: white;
+    font-weight: 600;
+}
+
+.sub_Container_Upper_Field{
+    width: 100%;
+    height: 100%;
+}
+
+.Search_Input_Field{
+    width: 100%;
+    height: 50%;
+    border: 1px solid white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.EmpName_InputField{
+width: 50%;
+height: 60%;
+}
+
+.Search_Button{
+    width: 100%;
+    height: 50%;
+    border: 1px solid white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,174 @@
+body{
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(233, 232, 232);
+}
+
+.Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    height: 629px;
+    width: 100%;
+    background-color: rgb(233, 232, 232);
+    /* border: 1px solid lightgray;
+    box-sizing: border-box; */
+}
+
+.main_Container{
+    height: 100%;
+    width:50%;
+    border-radius: 15px;
+    /* border: 1px solid lightgrey; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.main_container_Header{
+    height: 30%;
+    width: 100%;
+    /* border: 1px solid lightgray; */
+    font-family: 'Snell Roundhand', cursive;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    border-radius: 5px;
+    background-color: rgb(207, 103, 103);
+}
+
+.main_container_Header_Text{
+    border: 1px solid lightgray;
+    height: 40%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d0d0d;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.main_Container_Body{
+    height: 70%;
+    width: 100%;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+.main_Container_BodyHeader{
+
+    height: 15%;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    box-sizing: border-box;
+    font-family: 'Snell Roundhand', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+
+}
+
+.main_Container_BodyOperation{
+    display: flex;
+    height: 85%;
+    width: 100%;
+}
+
+.main_Container_BodyOperation_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.form_EmailName{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    /* border: 1px solid lightgray;
+    box-sizing: border-box; */
+    justify-content: center;
+    align-items: center;
+}
+
+.form_Email{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    /* border: 1px solid lightgray;
+    box-sizing: border-box; */
+    justify-content: center;
+    align-items: center;
+}
+
+.form_Salary{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    /* border: 1px solid lightgray;
+    box-sizing: border-box; */
+    justify-content: center;
+    align-items: center;
+}
+
+.label_Field{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid lightgray;
+    box-sizing: border-box; */
+    font-family: 'Snell Roundhand', cursive;
+}
+
+.EmpInput{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid lightgray;
+    box-sizing: border-box; */
+}
+
+.EmpInput_Field{
+    height: 50%;
+    width: 90%;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: 'Snell Roundhand', cursive;
+}
+
+.btn {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-family: 'Andale Mono', monospace;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 200px;
+    /* height: 45px; */
+}
+
+.success {
+    background-color: #0000cc;
+}
+
+.form_InsertButton{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

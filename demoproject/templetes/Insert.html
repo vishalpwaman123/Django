@@ -1,0 +1,49 @@
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Insert Operation</title>
+    {% load static %}
+    <link rel="stylesheet" href={% static 'Insert.css' %}>
+</head>
+
+<body>
+    <div class="Container" style="background-color: rgb(233, 232, 232);">
+        <div class="main_Container" >
+            <div class="main_container_Header" style="background-color: rgb(207, 103, 103); border:1px solid black">
+                <div class="main_container_Header_Text">Insert Operation</div>
+            </div>
+            <div class="main_Container_Body">
+                <div class="main_Container_BodyHeader">Operation</div>
+                <div class="main_Container_BodyOperation">
+                    <form class="main_Container_BodyOperation_form" method="POST">
+                        {% csrf_token %}
+                        <div class="form_EmailName">
+                            <label class="label_Field">Employee name:</label><br>
+                            <div class="EmpInput"><input type="text" class="EmpInput_Field" value=""
+                                    placeholder="eg. Vishal" name="Empname"><br></div>
+                        </div>
+                        <div class="form_Email">
+                            <label class="label_Field">Email:</label><br>
+                            <div class="EmpInput"><input type="email" class="EmpInput_Field" value=""
+                                    placeholder="eg. vishalpwaman123@gmail.com" name="EmpEmail"><br></div>
+                        </div>
+                        <div class="form_Salary">
+                            <label class="label_Field">Salary:</label><br>
+                            <div class="EmpInput"><input type="number" class="EmpInput_Field" value=""
+                                    placeholder="eg. 20000" name="EmpSalary"><br></div>
+                        </div>
+                        <div class="form_InsertButton">
+                            <button class="btn success" type="submit"
+                                onclick="return alert('Record Is Saved Sucessfully..!')">Insert</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock %}
