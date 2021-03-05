@@ -10,9 +10,9 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0px;
-    height: 629px;
+    height: 628px;
     width: 100%;
-    background-color: rgb(233, 232, 232);
+    /* background-color: rgb(233, 232, 232); */
     /* border: 1px solid lightgray;
     box-sizing: border-box; */
 }
@@ -38,10 +38,12 @@ body{
     font-size: large;
     border-radius: 5px;
     background-color: rgb(207, 103, 103);
+    box-sizing: border-box;
 }
 
 .main_container_Header_Text{
     border: 1px solid lightgray;
+    box-sizing: border-box;
     height: 40%;
     width: 50%;
     display: flex;
@@ -51,12 +53,13 @@ body{
     color: white;
     border-radius: 10px;
     font-weight: 600;
+    box-shadow: 0 2px 5px 0 #3e3e3e, 0 4px 15px 0 #444444;
 }
 
 .main_Container_Body{
     height: 70%;
     width: 100%;
-    border: 1px solid lightgray;
+    border: 1px solid rgb(172, 165, 165);
     box-sizing: border-box;
 }
 
@@ -67,10 +70,11 @@ body{
     border-bottom: 1px solid lightgray;
     box-sizing: border-box;
     font-family: 'Snell Roundhand', cursive;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: large;
+    font-size: 20px;
 
 }
 
@@ -159,6 +163,7 @@ body{
     border-radius: 8px;
     width: 200px;
     /* height: 45px; */
+    box-shadow: 0 2px 5px 0 #3e3e3e, 0 4px 15px 0 #444444;
 }
 
 .success {

@@ -3,7 +3,7 @@
     margin: 0px;
     width: 100%;
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-    /* background-color: rgb(245, 245, 245); */
+    background-color: rgb(245, 245, 245);
 }
 
 .text_effect{
@@ -36,10 +36,25 @@
 }
 
 .sub_Container_bottom{
-    height: 70%;
+    height: 40%;
     width: 100%;
     /* border: 1px solid white;
     box-sizing: border-box; */
+}
+
+.sub_Container_DeleteButton{
+    height: 30%;
+    width: 100%;
+    /* border: 1px solid white;
+    box-sizing: border-box; */
+}
+
+.Delete_Button_Field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .sub_Container_Upper_Button{
@@ -71,9 +86,6 @@
     margin: 5px 0 0 0;
 }
 
-.table_Formate_Header_Row{
-}
-
 .table_Formate_Attribute_Id{
     width: 15%;
     border: 1px solid black;
@@ -103,8 +115,9 @@
     height: 50%;
     border-radius: 5px;
     border: none;
-    box-shadow: 0 2px 5px 0 gray, 0 4px 15px 0 gray;
 }
+
+
 
 .btn:hover{
     background-color: rgb(87, 110, 131);
@@ -115,11 +128,21 @@
     height: 70%;
     border-radius: 5px;
     border: none;
-    box-shadow: 0 2px 5px 0 gray, 0 4px 15px 0 gray;
+}
+
+.btn2{
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    border: none;
 }
 
 .btn1:hover{
     background-color: rgb(250, 79, 79);
+}
+
+.btn2:hover{
+    background-color: rgba(28, 59, 65, 0.5);
 }
 
 .search_btn{
@@ -132,6 +155,18 @@
     background-color: rgb(255, 107, 107);
     color: white;
     font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px 0 gray, 0 4px 15px 0 gray;
+}
+
+.search_btn2{
+    box-shadow: 0 2px 5px 0 gray, 0 4px 25px 0 gray;
+    background-color: rgba(3, 57, 66, 0.5);
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 
 .sub_Container_Upper_Field{

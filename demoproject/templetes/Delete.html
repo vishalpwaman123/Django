@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Display Operation</title>
+    {% load static %}
+    <link rel="stylesheet" href={% static 'Delete.css' %}>
+</head>
+
+<body class="Cointainer">
+    <div class="main_Container">
+        <div class="sub_Container">
+            <div class="sub_Container_upper">
+                <div class="sub_Container_Upper_Field">
+                    <div class="Search_Input_Field">
+                        <div>Search Employee Name : &nbsp;</div>
+                        <input type="text" class="EmpName_InputField text_effect" name="fname" placeholder="eg. Vishal">
+                    </div>
+                    <div class="Search_Button">
+                        <button class="btn1 search_btn1 text_effect">Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub_Container_bottom">
+                <table class="table_Formate">
+                    <tr class="table_Formate_Header_Row">
+                        <th class="table_Formate_Attribute_Id">Employee Id</th>
+                        <th class="table_Formate_Attribute_Name">Employee Name</th>
+                        <th class="table_Formate_Attribute_Email">Email</th>
+                        <th class="table_Formate_Attribute_Salary">Salary</th>
+                    </tr>
+                    {%for datadisplay in sqlserverconnection%}
+                    <tr table_Formate_Row>
+                        <td>{{datadisplay.Empid}}</td>
+                        <td>{{datadisplay.Empname}}</td>
+                        <td>{{datadisplay.Email}}</td>
+                        <td>{{datadisplay.Salary}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="sub_Container_DeleteButton">
+                <div class="Delete_Button_Field">
+                    <button class="btn2 search_btn2 text_effect">Delete Record</button>
+                </div>>
+            </div>
+
+        </div>
+</body>
+
+</html>
