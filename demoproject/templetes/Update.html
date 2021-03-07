@@ -1,47 +1,75 @@
 <html>
 
 <head>
-    <title>Insert Operation</title>
+    <title>Update Operation</title>
     {% load static %}
     <link rel="stylesheet" href={% static 'Update.css' %}>
 </head>
 
 <body class="Container">
+
     <div class="main_Container">
         <div class="main_container_Header">
             <div class="main_container_Header_Text">Update Operation</div>
         </div>
         <div class="main_Container_Body">
             <div class="main_Container_BodyHeader">Operation</div>
-            <div class="main_Container_BodyOperation">
-                <div class="main_Container_SearchOperation">
-                    <div class="form_SearchEmpName">
-                        <label class="Search_label_Field">Search Employee : </label><br>
-                        <div class="EmpInput"><input type="text" class="EmpInput_Field" value="" placeholder="eg.Vishal"
-                                ><br></div>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="main_Container_BodyOperation">
+
+                    <div class="main_Container_SearchOperation">
+                        <div class="form_SearchEmpName">
+                            <label class="Search_label_Field">Search Employee : </label><br>
+                            <div class="EmpInput"><input type="text" class="EmpInput_Field" name="Empname" value=""
+                                    placeholder="eg.Vishal" autocomplete="off"><br></div>
+                            <div class="Search_Button_Field text_family"><button class="Search_Button text_family"
+                                    value="searchButton">Search</button></div>
+                        </div>
+                        <div class="Search_Result text_family">
+
+                            <table class="table_Formate text_family">
+                                <tr class="table_Formate_Header_Row">
+                                    <th class="table_Formate_Attribute_Id">Employee Id</th>
+                                    <th class="table_Formate_Attribute_Name">Employee Name</th>
+                                    <th class="table_Formate_Attribute_Email">Email</th>
+                                    <th class="table_Formate_Attribute_Salary">Salary</th>
+                                </tr>
+                                {%for datadisplay in sqlserverconnection%}
+                                <tr class="table_Formate_Row">
+                                    <td style="padding: 0 0 0 40px;">{{datadisplay.Empid}}</td>
+                                    <td style="padding: 0 0 0 40px;">{{datadisplay.Empname}}</td>
+                                    <td style="padding: 0 0 0 40px;">{{datadisplay.Email}}</td>
+                                    <td style="padding: 0 0 0 40px;">{{datadisplay.Salary}}</td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+
+                        </div>
                     </div>
+
+                    <form class="main_Container_BodyOperation_form" action="">
+                        <div class="form_EmpName">
+                            <label class="label_Field">Update Employee name:</label><br>
+                            <div class="EmpInput"><input type="text" class="EmpInput_Field" name="UpEmpname"
+                                    autocomplete="off" placeholder="eg.Rahul" value=""><br></div>
+                        </div>
+                        <div class="form_Email">
+                            <label class="label_Field">Update Email:</label><br>
+                            <div class="EmpInput"><input type="email" class="EmpInput_Field" name="UpEmpEmail"
+                                    autocomplete="off" placeholder="eg.rahul@gmail.com" value=""><br></div>
+                        </div>
+                        <div class="form_Salary">
+                            <label class="label_Field">Update Salary:</label><br>
+                            <div class="EmpInput"><input type="number" class="EmpInput_Field" name="UpEmpSalary"
+                                    autocomplete="off" placeholder="eg.2000" value=""><br></div>
+                        </div>
+                        <div class="form_InsertButton">
+                            <button class="btn success">Update</button>
+                        </div>
+                    </form>
                 </div>
-                <form class="main_Container_BodyOperation_form" action="">
-                    <div class="form_EmpName">
-                        <label class="label_Field">Update Employee name:</label><br>
-                        <div class="EmpInput"><input type="text" class="EmpInput_Field" value=""
-                                ><br></div>
-                    </div>
-                    <div class="form_Email">
-                        <label class="label_Field">Update Email:</label><br>
-                        <div class="EmpInput"><input type="email" class="EmpInput_Field" value=""
-                                ><br></div>
-                    </div>
-                    <div class="form_Salary">
-                        <label class="label_Field">Update Salary:</label><br>
-                        <div class="EmpInput"><input type="number" class="EmpInput_Field" value=""
-                                ><br></div>
-                    </div>
-                    <div class="form_InsertButton">
-                        <button class="btn success">Update</button>
-                    </div>
-                </form>
-            </div>
+            </form>
         </div>
     </div>
 </body>

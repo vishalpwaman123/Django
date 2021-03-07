@@ -11,3 +11,6 @@ class Insertdata(models.Model):
     Empname=models.CharField(max_length=100)
     Email=models.CharField(max_length=100)
     Salary=models.IntegerField()
+
+class Insertname(models.Model):
+    Empname=models.CharField(max_length=100)

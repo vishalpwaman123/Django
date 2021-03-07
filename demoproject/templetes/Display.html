@@ -10,24 +10,33 @@
     <div class="main_Container">
         <div class="sub_Container">
             <div class="sub_Container_upper">
-                <div class="sub_Container_Upper_Button">
-                    <!-- <div class="Upper_SearchButton"><button class="btn search_btn">Search Name</button></div> -->
-                    <div class="Upper_SearchButton"><button class="btn search_btn text_effect">Display Records</button></div>
-                </div>
-                <div class="sub_Container_Upper_Field">
-                    <div class="Search_Input_Field">
-                        <div>Employee Name : &nbsp;</div>
-                        <input type="text" class="EmpName_InputField text_effect" name="fname" placeholder="eg. Vishal">
+                <form method="POST" class="GetForm">
+                    {% csrf_token %}
+                    <div class="sub_Container_Upper_Button">
+                        <!-- <div class="Upper_SearchButton"><button class="btn search_btn">Search Name</button></div> -->
+                        <div class="Upper_SearchButton"><button class="btn search_btn text_effect" name="button_name" value="all_Record"
+                                >Display Records</button>
+                        </div>
                     </div>
-                    <div class="Search_Button">
-                        <button class="btn1 search_btn1 text_effect">Search</button>
+                   </form>
+                    <form method="POST" class="PostForm">
+                        {% csrf_token %}
+                    <div class="sub_Container_Upper_Field">
+                        <div class="Search_Input_Field">
+                            <div>Employee Name : &nbsp;</div>
+                            <input type="text" class="EmpName_InputField text_effect" name="fname"
+                                placeholder="eg. Vishal" autocomplete="off">
+                        </div>
+                        <div class="Search_Button">
+                            <button class="btn1 search_btn1 text_effect">Search</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
-            
+
             <div>
                 <div class="sub_Container_bottom">
-                    <table class="table_Formate">
+                    <table class="table_Formate"> 
                         <tr class="table_Formate_Header_Row">
                             <th class="table_Formate_Attribute_Id">Employee Id</th>
                             <th class="table_Formate_Attribute_Name">Employee Name</th>
@@ -35,11 +44,11 @@
                             <th class="table_Formate_Attribute_Salary">Salary</th>
                         </tr>
                         {%for datadisplay in sqlserverconnection%}
-                        <tr table_Formate_Row>
-                            <td>{{datadisplay.Empid}}</td>
-                            <td>{{datadisplay.Empname}}</td>
-                            <td>{{datadisplay.Email}}</td>
-                            <td>{{datadisplay.Salary}}</td>
+                        <tr class="table_Formate_Row">
+                            <td style="padding: 0 0 0 40px;">{{datadisplay.Empid}}</td>
+                            <td style="padding: 0 0 0 40px;">{{datadisplay.Empname}}</td>
+                            <td style="padding: 0 0 0 40px;">{{datadisplay.Email}}</td>
+                            <td style="padding: 0 0 0 40px;">{{datadisplay.Salary}}</td>
                         </tr>
                         {% endfor %}
                     </table>

@@ -16,6 +16,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    background-color: rgb(240, 239, 239);
 }
 
 .sub_Container{
@@ -23,7 +24,7 @@
     width: 50%;
     /* border: 1px solid lightgray; */
     border-radius: 10px;
-    background-color: lightgray;
+    /* background-color: lightgray; */
 }
 
 .sub_Container_upper{
@@ -33,23 +34,35 @@
     box-sizing: border-box; */
     display: flex;
     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: lightgray;
 }
 
 .sub_Container_bottom{
     height: 70%;
     width: 100%;
+    /* background-color: lightgray; */
     /* border: 1px solid white;
     box-sizing: border-box; */
 }
 
 .sub_Container_Upper_Button{
     height: 100%;
-    width: 30%;
+    width: 100%;
     /* border: 1px solid white;
     box-sizing: border-box; */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.GetForm{
+    width: 30%;
+    height: 100%;
+}
+
+.PostForm{
+    width: 70%;
+    height: 100%;
 }
 
 .Upper_SearchButton{
@@ -65,13 +78,28 @@
 
 .table_Formate{
     width: 100%;
+    height: fit-content;
     /* border: 2px solid black; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* box-sizing: border-box;     */
     margin: 5px 0 0 0;
 }
 
-.table_Formate_Header_Row{
+/* .table_formate_row{
+    display: flex;
+    flex-direction: row;
+} */
+
+/* .table_data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.table_data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .table_Formate_Attribute_Id{
