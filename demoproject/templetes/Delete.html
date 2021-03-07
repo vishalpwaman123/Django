@@ -7,16 +7,24 @@
 </head>
 
 <body class="Cointainer">
-    <div class="main_Container">
+    <form method="POST" class="main_Container">
+        {% csrf_token %}
         <div class="sub_Container">
             <div class="sub_Container_upper">
                 <div class="sub_Container_Upper_Field">
                     <div class="Search_Input_Field">
-                        <div>Search Employee Name : &nbsp;</div>
-                        <input type="text" class="EmpName_InputField text_effect" name="fname" placeholder="eg. Vishal">
+                        <div>Employee Name : &nbsp;</div>
+                        <input type="text" class="EmpName_InputField text_effect" name="fname" placeholder="eg. Vishal"
+                            autocomplete="off">
                     </div>
-                    <div class="Search_Button">
-                        <button class="btn1 search_btn1 text_effect">Search</button>
+                    <div class="Buttons">
+                        <div class="Search_Button">
+                            <button class="btn1 search_btn1 text_effect" name="Search_button"
+                                value="Search_Record">Search</button>
+                        </div>
+                        <div class="Delete_Field">
+                            <button class="btn2 search_btn2 text_effect" name="Delete_button" value="Delete_Record">Delete Record</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -29,7 +37,7 @@
                         <th class="table_Formate_Attribute_Email">Email</th>
                         <th class="table_Formate_Attribute_Salary">Salary</th>
                     </tr>
-                    {%for datadisplay in sqlserverconnection%}
+                    {%for datadisplay in result%}
                     <tr table_Formate_Row>
                         <td>{{datadisplay.Empid}}</td>
                         <td>{{datadisplay.Empname}}</td>
@@ -39,13 +47,19 @@
                     {% endfor %}
                 </table>
             </div>
-            <div class="sub_Container_DeleteButton">
-                <div class="Delete_Button_Field">
+            <!-- <div class="sub_Container_DeleteButton">
+                <div class="Delete_Field">
+                    <div class="Delete_Field_Text">Delete Employee (Name) : &nbsp;</div>
+                    <input type="text" class="Delete_EmpName_InputField text_effect" name="fname"
+                        placeholder="eg. Vishal" autocomplete="off">
+                </div>
+                <div class="Delete_Field">
                     <button class="btn2 search_btn2 text_effect">Delete Record</button>
-                </div>>
-            </div>
+                </div>
+            </div>  -->
 
         </div>
+    </form>
 </body>
 
 </html>

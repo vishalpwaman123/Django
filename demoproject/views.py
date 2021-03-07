@@ -10,14 +10,14 @@ connection = pyodbc.connect('Driver={sql server};'
                             'Database=DjangoDatabase;'
                             'Trusted_Connection=yes;')
 
+cursor = connection.cursor()
+
 
 def HomePage(request):
     return render(request, 'HomePage.html')
 
 
 def InsertRecord(request):
-    cursor = connection.cursor()
-
     if request.method == 'POST':
         if request.POST.get('Empname') and request.POST.get('EmpEmail') and request.POST.get('EmpSalary'):
             insertstvalues = Insertdata()
@@ -35,7 +35,6 @@ def InsertRecord(request):
 
 
 def UpdateRecord(request):
-    cursor = connection.cursor()
     if request.method == 'POST':
         if request.POST.get('Empname'):
             insertdata = Insertname()
@@ -66,12 +65,11 @@ def UpdateRecord(request):
 
 
 def DisplayRecord(request):
-    cursor = connection.cursor()
+
     if request.method == 'POST':
         if request.POST.get('fname'):
             insertdata = Insertname()
             insertdata.Empname = request.POST.get('fname')
-
             cursor.execute(
                 "select * from EmployeeRecord where Empname='"+insertdata.Empname+"'")
             result = cursor.fetchall()
@@ -84,10 +82,36 @@ def DisplayRecord(request):
 
         else:
             return render(request, 'Display.html')
-
     else:
         return render(request, 'Display.html')
 
 
 def DeleteRecord(request):
-    return render(request, 'Delete.html')
+    insertdata = Insertdata()
+    if request.method == 'POST':
+        if request.POST.get('Search_button') == 'Search_Record':
+            if request.POST.get('fname'):
+                insertdata.Empname = request.POST.get('fname')
+                cursor.execute(
+                    "select * from EmployeeRecord where Empname='"+insertdata.Empname+"'")
+                result = cursor.fetchall()
+                return render(request, 'Delete.html', {'result': result})
+            else:
+                return render(request, 'Delete.html')
+
+        elif request.POST.get('Delete_button') == 'Delete_Record':
+            if request.POST.get('fname'):
+                insertdata.Empname = request.POST.get('fname')
+                cursor.execute(
+                    "select * from EmployeeRecord where Empname='"+insertdata.Empname+"'")
+                result = cursor.fetchall()
+                cursor.execute(
+                    "DELETE FROM EmployeeRecord WHERE Empname='"+insertdata.Empname+"'")
+                return render(request, 'Delete.html', {'result': result})
+            else:
+                return render(request, 'Delete.html')
+
+        else:
+            return render(request, 'Delete.html')
+    else:
+        return render(request, 'Delete.html')
